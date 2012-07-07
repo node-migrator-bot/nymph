@@ -942,13 +942,13 @@
 
     * [tty.open(path, args=[])][385]
     * [tty.isatty(fd)][386]
-    * [tty.setRawMode(mode)][387]
+    * [process.stdin.setRawMode(mode)][387]
     * [tty.setWindowSize(fd, row, col)][388]
     * [tty.getWindowSize(fd)][389]
 
    [385]: http://nodejs.org/docs/latest/api/all.html#tty.open
    [386]: http://nodejs.org/docs/latest/api/all.html#tty.isatty
-   [387]: http://nodejs.org/docs/latest/api/all.html#tty.setRawMode
+   [387]: http://nodejs.org/docs/latest/api/all.html#process.stdin.setRawMode
    [388]: http://nodejs.org/docs/latest/api/all.html#tty.setWindowSize
    [389]: http://nodejs.org/docs/latest/api/all.html#tty.getWindowSize
 
@@ -5476,7 +5476,7 @@ Example:
 
     
     var tty = require('tty');
-    tty.setRawMode(true);
+    process.stdin.setRawMode(true);
     process.stdin.resume();
     process.stdin.on('keypress', function(char, key) {
       if (key && key.ctrl && key.name == 'c') {
@@ -5499,7 +5499,7 @@ object.
 Returns `true` or `false` depending on if the `fd` is associated with a
 terminal.
 
-### tty.setRawMode(mode)
+### process.stdin.setRawMode(mode)
 
 `mode` should be `true` or `false`. This sets the properties of the current
 process's stdin fd to act either as a raw device or default.
