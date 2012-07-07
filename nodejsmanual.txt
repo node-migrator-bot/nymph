@@ -513,7 +513,7 @@
     * [path.basename(p, [ext])][212]
     * [path.extname(p)][213]
     * [fs.exists(p, [callback])][214]
-    * [path.existsSync(p)][215]
+    * [fs.existsSync(p)][215]
 
    [208]: http://nodejs.org/docs/latest/api/all.html#path.normalize
    [209]: http://nodejs.org/docs/latest/api/all.html#path.join
@@ -522,7 +522,7 @@
    [212]: http://nodejs.org/docs/latest/api/all.html#path.basename
    [213]: http://nodejs.org/docs/latest/api/all.html#path.extname
    [214]: http://nodejs.org/docs/latest/api/all.html#fs.exists
-   [215]: http://nodejs.org/docs/latest/api/all.html#path.existsSync
+   [215]: http://nodejs.org/docs/latest/api/all.html#fs.existsSync
 
   * [net][216]
 
@@ -3322,7 +3322,7 @@ with either true or false. Example:
       util.debug(exists ? "it's there" : "no passwd!");
     });
 
-### path.existsSync(p)
+### fs.existsSync(p)
 
 Synchronous version of `fs.exists`.
 

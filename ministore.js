@@ -10,7 +10,7 @@ var path = require('path')
 
 module.exports = function Base(base) {
   base = path.normalize(base)
-  if (!path.existsSync(base)) fs.mkdirSync(base, 0755)
+  if (!fs.existsSync(base)) fs.mkdirSync(base, 0755)
 
   return function Store(name) {
     name = name.replace(/(\.\.)+|\/+/gim, '')
